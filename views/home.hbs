@@ -1,0 +1,50 @@
+<div class="container mt-3">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Crypto News Network</h1>
+        <p class="lead">Your Source for Up to minute Crypto Currency and BlcokChain News</p>
+    </div>   
+    <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">24h High</th>
+                    <th scope="col">24h Low</th>
+                    <th scope="col">Market Cap</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each response_prices.DISPLAY }}
+                <tr>
+                    <td>{{ @key }}</td>
+                    <td>{{ this.USD.PRICE }}</td>
+                    <td>{{ this.USD.HIGHDAY }}</td>
+                    <td>{{ this.USD.LOWDAY }}</td>
+                    <td>{{ this.USD.MKTCAP }}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>         
+</div>
+
+<div class="container">
+    <div class="row">
+        {{#each response_news.Data }}
+        <div class="col-sm">
+            <div class="card mb-3">
+                <img src="{{ this.imageurl }}" alt="{{ this.source }}" class="car-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{ this.title }}
+                    </h5>
+                    <p class="card-text">
+                        {{ this.body }}
+                    </p>
+                    <a href="{{ this.url }}" class="btn btn-secondary">Read More...</a>
+                    <br/>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</di

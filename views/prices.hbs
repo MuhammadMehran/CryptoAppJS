@@ -1,0 +1,35 @@
+<div class="container mt-3">
+    {{#if crypto.Response }}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Not Found!</h4>
+        <p>Aww snap, it looks like no such coin existed</p>
+        <hr>
+        <p class="mb-0">Try Again, Goto Search Box in Navigation Bar and type crypto coin Sybmol like BTC etc. You can also search for multiple coins separated with comman like BTC, ETH</p>
+    </div>
+    {{else}}
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">24h High</th>
+                <th scope="col">24h Low</th>
+                <th scope="col">Market Cap</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each crypto.DISPLAY }}
+            <tr>
+                <td>{{ @key }}</td>
+                <td>{{ this.USD.PRICE }}</td>
+                <td>{{ this.USD.HIGHDAY }}</td>
+                <td>{{ this.USD.LOWDAY }}</td>
+                <td>{{ this.USD.MKTCAP }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{/if}}
+</div>
