@@ -1,2 +1,2 @@
 # CryptoAppJS
-A simple django website about crypto and blockchain news
+A simple node website about crypto and blockchain news
