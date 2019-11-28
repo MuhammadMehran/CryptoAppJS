@@ -6,10 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>CryptoApp - {{ title }}</title>
+	<style>
+		.bot {
+		  background-color : #31B0D5;
+		  color: white;
+		  padding: 10px 20px;
+		  border-radius: 4px;
+		  border-color: #46b8da;
+		}
+
+		#bot_div {
+		  position: fixed;
+		  bottom: -4px;
+		  right: 10px;
+		}
+	</style>
 </head>
 <body>
     {{>_navbar}}
     {{{body}}}
+	<div id="bot_div">
+		<iframe
+			allow="microphone;"
+			width="350"
+			height="430"
+			src="https://console.dialogflow.com/api-client/demo/embedded/926c80ee-596d-4ae6-a708-6ffcbad1bfe9">
+		</iframe>
+	</div>
         
 </body>
 </html>
